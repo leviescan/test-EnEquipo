@@ -1,0 +1,25 @@
+<div class="container">
+<div class="row">
+    
+    <div class="col-xs-12 col-sm-6 col-md-4 mt-5 ml-5 mr-5" *ngFor="let personaje of personajes; let i=index" >
+        <div class="card text-center" >
+            <img [src]="personaje.image" class="card-img-top img shadow" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{personaje.name}}</h5>
+              <p class="card-text"> <span class="badge rounded-pill bg-success"> Estado: {{personaje.status}}</span>  &nbsp; <span class="badge rounded-pill bg-warning">Especie: {{personaje.species}}</span> &nbsp; <span class="badge rounded-pill bg-primary">Ultima locacion: {{personaje.location.name}}</span> &nbsp; <span class="badge rounded-pill bg-primary">url: {{personaje.location.url | slice:41:43}}</span>   &nbsp; <span class="badge rounded-pill bg-info">Ultimo episodio: {{personaje.episode.at(-1) | slice:40:43 }}</span></p>
+              <p class="card-text"> </p>
+
+              <a [routerLink]="['/details', personaje.id]" class="btn btn-outline-success">Detalles</a> &nbsp;
+              <a [routerLink]="['/location', personaje.location.url | slice:41:43]" class="btn btn-outline-primary">Locación</a>
+            </div>
+          </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound" *ngIf="personajes.length <= 0">
+        <p>sin resultados</p>
+    </div>
+</div>
+
+<button class="btn btn-warning"> continua </button>
+
+</div>

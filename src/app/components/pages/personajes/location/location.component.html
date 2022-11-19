@@ -1,0 +1,33 @@
+<div class="container text-center mt-5">
+    <div class=" justify-content-center">
+
+        <div class="col-md-12 mt-2 mb-5" *ngIf="location1 | async as personaje">
+
+            <div class="card mb-3">
+                
+                    
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h2 class="card-title "><strong> {{personaje.name}} </strong></h2>
+                            <p class="card-text mt-5 mb-5 ">
+                                <span class="badge rounded-pill bg-success"> Tipo: {{personaje.type}}</span>
+                                <span class="badge rounded-pill bg-warning">Dimension: {{personaje.dimension}}</span>
+                                <span class="badge rounded-pill bg-info ">Residentes: {{personaje.residents.length}}</span>
+                            </p>
+                            <p class="card-text"> </p>
+                        </div>
+                        <div> <a routerLink="/" class="btn btn-outline-warning">Ir a inicio</a> &nbsp; <button
+                                class="btn btn-outline-info " (click)="goBack()"> Ir a atras </button></div>
+
+                        <div></div>
+                    </div>
+                    <div class="card-footer">
+                        Creado: {{personaje.created | date: 'full'}}
+                    </div>
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>

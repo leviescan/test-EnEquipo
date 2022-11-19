@@ -1,0 +1,15 @@
+h2 {
+    color: rgb(168, 219, 253); 
+    font-family: 'Carattere', cursive; 
+    text-shadow: -1px 1px 0 rgb(3, 104, 255),
+    1px 1px 0 rgb(0, 119, 255),
+    1px -1px 0 rgb(3, 61, 253),
+    -1px -1px 0 rgb(2, 19, 255)
+}
+
+.card {
+    max-width: 1040px; 
+    border-color: aquamarine;
+    background-color: rgba(127, 255, 212, 0.123)
+
+}
